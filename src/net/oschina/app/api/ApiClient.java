@@ -83,14 +83,14 @@ public class ApiClient {
         appCookie = "";
     }
 
-    private static String getCookie(AppContext appContext) {
+    public static String getCookie(AppContext appContext) {
         if (appCookie == null || appCookie == "") {
             appCookie = appContext.getProperty("cookie");
         }
         return appCookie;
     }
 
-    private static String getUserAgent(AppContext appContext) {
+    public static String getUserAgent(AppContext appContext) {
         if (appUserAgent == null || appUserAgent == "") {
             StringBuilder ua = new StringBuilder("OSChina.NET");
             ua.append('/' + appContext.getPackageInfo().versionName + '_'

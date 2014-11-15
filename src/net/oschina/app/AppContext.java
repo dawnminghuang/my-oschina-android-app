@@ -57,7 +57,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.webkit.CacheManager;
 
 /**
