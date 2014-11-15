@@ -20,7 +20,6 @@ import android.widget.TextView;
  */
 public class ListViewPathAdapter extends BaseAdapter {
 
-	private Context context;// 运行上下文
 	private List<String> listItems;// 数据集合
 	private LayoutInflater listContainer;// 视图容器
 	private int itemViewResource;// 自定义项视图源
@@ -44,7 +43,6 @@ public class ListViewPathAdapter extends BaseAdapter {
 	 */
 	public ListViewPathAdapter(Context context, List<String> data,
 			int resource, OnPathOperateListener listener) {
-		this.context = context;
 		this.listContainer = LayoutInflater.from(context); // 创建视图容器并设置上下文
 		this.itemViewResource = resource;
 		this.listItems = data;

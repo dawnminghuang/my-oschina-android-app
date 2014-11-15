@@ -23,7 +23,6 @@ import android.widget.TextView;
  * @created 2012-3-21
  */
 public class ListViewQuestionAdapter extends BaseAdapter {
-	private Context 					context;//运行上下文
 	private List<Post> 					listItems;//数据集合
 	private LayoutInflater 				listContainer;//视图容器
 	private int 						itemViewResource;//自定义项视图源 

@@ -8,6 +8,7 @@ import java.lang.Thread.UncaughtExceptionHandler;
 import java.net.ConnectException;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.text.DateFormat;
 import java.util.Date;
 
 import net.oschina.app.common.UIHelper;
@@ -135,7 +136,8 @@ public class AppException extends Exception implements UncaughtExceptionHandler 
             }
             fw = new FileWriter(logFile, true);
             pw = new PrintWriter(fw);
-            pw.println("--------------------" + (new Date().toLocaleString()) + "---------------------");
+            DateFormat df = DateFormat.getDateInstance();
+            pw.println("--------------------" + (df.format(new Date())) + "---------------------");
             excp.printStackTrace(pw);
             pw.close();
             fw.close();
@@ -211,11 +213,9 @@ public class AppException extends Exception implements UncaughtExceptionHandler 
 
     @Override
     public void uncaughtException(Thread thread, Throwable ex) {
-
         if (!handleException(ex) && mDefaultHandler != null) {
             mDefaultHandler.uncaughtException(thread, ex);
         }
-
     }
 
     /**

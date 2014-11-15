@@ -19,7 +19,6 @@ import android.widget.TextView;
  * @created 2012-3-21
  */
 public class ListViewSoftwareCatalogAdapter extends BaseAdapter {
-	private Context 					context;//运行上下文
 	private List<SoftwareType> 			listItems;//数据集合
 	private LayoutInflater 				listContainer;//视图容器
 	private int 						itemViewResource;//自定义项视图源 
@@ -34,7 +33,6 @@ public class ListViewSoftwareCatalogAdapter extends BaseAdapter {
 	 * @param resource
 	 */
 	public ListViewSoftwareCatalogAdapter(Context context, List<SoftwareType> data,int resource) {
-		this.context = context;			
 		this.listContainer = LayoutInflater.from(context);	//创建视图容器并设置上下文
 		this.itemViewResource = resource;
 		this.listItems = data;

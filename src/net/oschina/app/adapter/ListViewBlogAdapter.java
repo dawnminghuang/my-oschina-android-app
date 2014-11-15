@@ -6,7 +6,6 @@ import net.oschina.app.R;
 import net.oschina.app.bean.Blog;
 import net.oschina.app.bean.BlogList;
 import net.oschina.app.common.StringUtils;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +21,6 @@ import android.widget.TextView;
  * @created 2012-3-21
  */
 public class ListViewBlogAdapter extends BaseAdapter {
-	private Context 					context;//运行上下文
 	private List<Blog> 					listItems;//数据集合
 	private LayoutInflater 				listContainer;//视图容器
 	private int 						itemViewResource;//自定义项视图源 
@@ -42,7 +40,6 @@ public class ListViewBlogAdapter extends BaseAdapter {
 	 * @param resource
 	 */
 	public ListViewBlogAdapter(Context context, int blogtype, List<Blog> data, int resource) {
-		this.context = context;			
 		this.listContainer = LayoutInflater.from(context);	//创建视图容器并设置上下文
 		this.itemViewResource = resource;
 		this.listItems = data;
