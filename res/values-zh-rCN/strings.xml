@@ -88,7 +88,4 @@
     <string name="setting_head_title">系统设置</string>
     <string name="capture_head_title">扫一扫</string>
     <string name="msg_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
-
-    <string name="drawer_open">Open navigation drawer</string>
-    <string name="drawer_close">Close navigation drawer</string>
 </resources>

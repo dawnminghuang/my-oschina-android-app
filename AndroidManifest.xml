@@ -5,7 +5,7 @@
     android:versionName="1.7.6.8" >
 
     <uses-sdk
-        android:minSdkVersion="13"
+        android:minSdkVersion="14"
         android:targetSdkVersion="19" />
     
     <uses-permission android:name="android.permission.INTERNET" />
@@ -61,6 +61,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="net.wolfcs.ui.MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" />
         <activity
             android:name=".ui.About"
             android:configChanges="keyboardHidden|orientation"

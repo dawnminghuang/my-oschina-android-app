@@ -53,4 +53,11 @@
         <item>翻墙</item>
         <item>非IT话题</item>
     </string-array>
+    <string-array name="osc_channels">
+        <item>资讯</item>
+        <item>问答</item>
+        <item>动弹</item>
+        <item>我的空间</item>
+        <item>设置</item>
+    </string-array>
 </resources>

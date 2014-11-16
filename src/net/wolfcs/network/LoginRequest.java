@@ -1,10 +1,12 @@
 package net.wolfcs.network;
 
+import java.io.ByteArrayInputStream;
 import java.util.HashMap;
 import java.util.Map;
 
 import net.oschina.app.AppContext;
 import net.oschina.app.api.ApiClient;
+import net.oschina.app.bean.Result;
 import net.oschina.app.bean.URLs;
 
 import com.android.volley.AuthFailureError;
@@ -66,5 +68,23 @@ public class LoginRequest extends StringRequest {
         String cookie = responseHeaders.get("Set-Cookie");
         mAppContext.setProperty("cookie", cookie);
         return super.parseNetworkResponse(response);
+    }
+
+    @Override
+    protected void deliverResponse(String response) {
+        response = response.replaceAll("\\p{Cntrl}", "");
+        if (response.contains("result") && response.contains("errorCode")
+                && mAppContext.containsProperty("user.uid")) {
+            try {
+                Result res = Result.parse(new ByteArrayInputStream(response.getBytes()));
+                if (res.getErrorCode() == 0) {
+                    mAppContext.Logout();
+                    mAppContext.getUnLoginHandler().sendEmptyMessage(1);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        super.deliverResponse(response);
     }
 }
