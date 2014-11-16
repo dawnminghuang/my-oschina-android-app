@@ -260,18 +260,6 @@ public class AppContext extends Application {
     }
 
     /**
-     * 用户登录验证
-     * 
-     * @param account
-     * @param pwd
-     * @return
-     * @throws AppException
-     */
-    public User loginVerify(String account, String pwd) throws AppException {
-        return ApiClient.login(this, account, pwd);
-    }
-
-    /**
      * 我的个人资料
      * 
      * @param isRefresh
