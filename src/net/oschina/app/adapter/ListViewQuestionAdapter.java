@@ -42,7 +42,6 @@ public class ListViewQuestionAdapter extends BaseAdapter {
 	 * @param resource
 	 */
 	public ListViewQuestionAdapter(Context context, List<Post> data,int resource) {
-		this.context = context;			
 		this.listContainer = LayoutInflater.from(context);	//创建视图容器并设置上下文
 		this.itemViewResource = resource;
 		this.listItems = data;

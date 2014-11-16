@@ -21,8 +21,7 @@ import android.util.Xml;
  * @created 2012-3-21
  */
 public class FriendList extends Entity{
-
-	public final static int TYPE_FANS = 0x00;
+    public final static int TYPE_FANS = 0x00;
 	public final static int TYPE_FOLLOWER = 0x01;
 	
 	private List<Friend> friendlist = new ArrayList<Friend>();
@@ -31,7 +30,7 @@ public class FriendList extends Entity{
 	 * 好友实体类
 	 */
 	public static class Friend implements Serializable {
-		private int userid;
+        private int userid;
 		private String name;
 		private String face;
 		private String expertise;

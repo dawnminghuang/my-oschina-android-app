@@ -19,8 +19,7 @@ import android.util.Xml;
  * @created 2012-3-21
  */
 public class Update implements Serializable{
-	
-	public final static String UTF8 = "UTF-8";
+    public final static String UTF8 = "UTF-8";
 	public final static String NODE_ROOT = "oschina";
 	
 	private int versionCode;

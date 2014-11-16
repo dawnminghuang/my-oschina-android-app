@@ -22,8 +22,7 @@ import android.util.Xml;
  * 	1.添加语音动弹属性
  */
 public class Tweet extends Entity{
-
-	public final static String NODE_ID = "id";
+    public final static String NODE_ID = "id";
 	public final static String NODE_FACE = "portrait";
 	public final static String NODE_BODY = "body";
 	public final static String NODE_AUTHORID = "authorid";

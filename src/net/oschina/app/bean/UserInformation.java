@@ -21,8 +21,7 @@ import android.util.Xml;
  * @created 2012-3-21
  */
 public class UserInformation extends Entity{
-	
-	private int pageSize;
+    private int pageSize;
 	private User user = new User();
 	private List<Active> activelist = new ArrayList<Active>();	
 

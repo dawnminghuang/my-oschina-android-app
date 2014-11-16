@@ -21,8 +21,7 @@ import android.util.Xml;
  * @created 2012-3-21
  */
 public class SoftwareCatalogList extends Entity{
-	
-	private int softwarecount;
+    private int softwarecount;
 	private List<SoftwareType> softwaretypelist = new ArrayList<SoftwareType>();
 	
 	public static class SoftwareType implements Serializable {

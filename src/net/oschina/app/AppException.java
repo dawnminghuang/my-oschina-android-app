@@ -18,7 +18,8 @@ import org.apache.commons.httpclient.HttpException;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.os.Environment;
-import android.os.Looper;
+import android.os.Handler;
+import android.os.HandlerThread;
 import android.widget.Toast;
 
 /**
@@ -237,13 +238,17 @@ public class AppException extends Exception implements UncaughtExceptionHandler 
 
         final String crashReport = getCrashReport(context, ex);
         // 显示异常信息&发送报告
-        new Thread() {
+        HandlerThread thread = new HandlerThread("Temp main");
+        thread.start();
+        Handler handler = new Handler(thread.getLooper());
+        handler.post(new Runnable() {
+
+            @Override
             public void run() {
-                Looper.prepare();
                 UIHelper.sendAppCrashReport(context, crashReport);
-                Looper.loop();
             }
-        }.start();
+        });
+
         return true;
     }
 

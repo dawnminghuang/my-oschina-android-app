@@ -20,8 +20,7 @@ import android.util.Xml;
  * @created 2012-3-21
  */
 public class TweetList extends Entity{
-	
-	public final static int CATALOG_LASTEST = 0;
+    public final static int CATALOG_LASTEST = 0;
 	public final static int CATALOG_HOT = -1;
 
 	private int pageSize;

@@ -18,8 +18,7 @@ import android.util.Xml;
  * @created 2012-3-21
  */
 public class User extends Base {
-	
-	public final static int	RELATION_ACTION_DELETE = 0x00;//取消关注
+    public final static int	RELATION_ACTION_DELETE = 0x00;//取消关注
 	public final static int	RELATION_ACTION_ADD = 0x01;//加关注
 	
 	public final static int	RELATION_TYPE_BOTH = 0x01;//双方互为粉丝
