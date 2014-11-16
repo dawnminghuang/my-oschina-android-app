@@ -1487,7 +1487,7 @@ public class UIHelper {
                 // 退出
                 AppManager.getAppManager().AppExit(cont);
             }
-        });
+        }).setCancelable(false);
         builder.show();
     }
 
