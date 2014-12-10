@@ -88,4 +88,10 @@
     <string name="setting_head_title">系统设置</string>
     <string name="capture_head_title">扫一扫</string>
     <string name="msg_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
+
+    <string name="news_menu_name">资讯</string>
+    <string name="question_menu_name">问答</string>
+    <string name="tweet_menu_name">动弹</string>
+    <string name="userspace_menu_name">我的空间</string>
+    <string name="setting_menu_name">设置</string>
 </resources>
